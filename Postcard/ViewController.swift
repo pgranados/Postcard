@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var enterNameTextField: UITextField!
     @IBOutlet weak var enterMessageTextField: UITextField!
     @IBOutlet weak var mailButton: UIButton!
+    @IBOutlet weak var nameLabel: UILabel!
    
     
     override func viewDidLoad() {
@@ -31,9 +32,15 @@ class ViewController: UIViewController {
         
         // Comment to test commit
         messageLabel.hidden = false
-        messageLabel.text = enterMessageTextField.text
+        messageLabel.text = enterNameTextField.text
         messageLabel.textColor = UIColor.redColor()
         
+        nameLabel.hidden = false
+        nameLabel.text = enterMessageTextField.text
+        nameLabel.textColor = UIColor.blueColor()
+        
+        enterNameTextField.text = ""
+        enterNameTextField.resignFirstResponder()
         enterMessageTextField.text = ""
         enterMessageTextField.resignFirstResponder()
         
